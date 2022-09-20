@@ -1,0 +1,71 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+body{
+    background: url(bg.jpg)  no-repeat center center fixed;
+    background: url(https://source.unsplash.com/5000x5000/?sea,space,mauntain,nature,history,spirituality,animal,cricket,athletics)  no-repeat center center fixed;
+    background-size: cover;
+}
+.container{
+    /* border: 5px solid black; */
+    color: whitesmoke;
+    position: absolute;
+    top: 6%;
+    left: 37%;
+     
+
+} 
+.container h1{
+    display: inline-block;
+    font-size: 44px;
+    border-bottom: 7px solid purple;
+    margin-bottom: 42px;
+    padding:  12px 0px;
+}
+.box{
+    width: 91%;
+    /* border: 2px solid yellow; */
+    border-bottom: 3px solid purple;
+    margin:  13px;
+}
+.box input{
+    width: 75%;
+    font-size: 23px;
+    border: none;
+    outline: none;
+    /* color: tomato; */
+    background: none;
+    /* color: white; */
+    font-weight: bold;
+}
+#btn{
+    cursor: pointer;
+    outline: none;
+    width: 25%;
+    margin: 12px 0;
+    padding: 7px;
+    border: 2px solid purple;
+    border-radius: 15px;
+    font-size: 20px;
+    background: none;
+} 
+#btn:hover{
+    color: rgb(137, 233, 240);
+    background: white;
+opacity: 0.5;
+
+}
+.box i{
+    width: 29px;
+    /* display: flex; */
+    text-align: center;
+    /* align-items:  center; */
+}
+.errorMsg{
+    color: rgb(236, 101, 101);
+    font-size: 23px;
+    text-align: left;
+    padding-left: 22px;
+    font-weight:bold;
+}

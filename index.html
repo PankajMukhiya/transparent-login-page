@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <!-- Place your kit's code here -->
+    <script src="https://kit.fontawesome.com/f518fc270d.js" crossorigin="anonymous"></script>
+    <title>Sign In with Validations</title>
+    <link rel="stylesheet" href="style.css" />
+</head>
+
+<body>
+    <div class="container">
+        <h1>Sign In</h1>
+        <form action="" onsubmit="return validateForm()">
+            <div class="box">
+                <i class="fa fa-envelope"></i>
+                <input type="email" name="email" id="email" placeholder="Enter your email" />
+                <p class="errorMsg" id="emailError"></p>
+            </div>
+            <div class="box">
+                <i class="fa fa-key"></i>
+                <input type="password" name="password" id="password" placeholder="Enter your password" />
+                <p class="errorMsg" id="passError"></p>
+            </div>
+            <button type="submit" id="btn">Sign In</button>
+        </form>
+    </div>
+
+    <script>
+        let email = document.getElementById('email');
+        let password = document.getElementById('password');
+        let flag ;
+        
+        function validateForm() {
+            if (email.value == "") {
+                document.getElementById('emailError').innerHTML = 'Email is Empty';
+                flag = 0;
+            } else if (email.value.length < 13) {
+                document.getElementById('emailError').innerHTML = 'Enter a valid Email';
+                flag = 0;
+            } else {
+                document.getElementById('emailError').innerHTML = ' ';
+                flag = 1;
+            }
+
+            if (password.value == "") {
+                document.getElementById('passError').innerHTML = 'Password required minimum 8 characters';
+                flag = 0;
+
+            }
+            else if (password.value.length <= 8) {
+                document.getElementById('passError').innerHTML = 'Password required minimum 8 characters';
+                flag = 0;
+            } else {
+                document.getElementById('passError').innerHTML = ' ';
+                flag = 1;
+            }
+
+            if (flag) {
+                return true
+            } else {
+            }
+            return false
+
+
+        }
+
+    </script>
+</body>
+
+</html>
